@@ -6,6 +6,7 @@
     box-sizing: border-box;
     padding: 0;
     line-height: 1.5;
+    background-color: #1e1e1f;
 }
 
 li, a, button {
@@ -28,15 +29,19 @@ header {
     justify-content: flex-end;
     align-items: center;
     padding: 2vh 10vw; /* Use viewport units for spacing */
-    background-color: black;
+    background-color: #1e1e1f;
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding-top: 10px; /* Adjusted padding for better alignment */
 }
 
 .logo {
     cursor: pointer;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .logo:active{
     transform: scale(0.95);
@@ -46,21 +51,27 @@ header {
     list-style: none;
     display: flex;
     gap: 3vw; /* Flexible spacing between links */
-    background-color: transparent;
+    background-color: #1e1e1f;
 }
 
 .nav__links li a {
     transition: all 0.3s ease 0s;
-    background-color: white;
+    color: white;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: color 15s ease-in-out infinite;
 }
 
 .nav__links li a:hover {
-    background-color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: color 2s ease-in-out infinite;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#page-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 150px; /* Base font size */
+    color: white;
 }
