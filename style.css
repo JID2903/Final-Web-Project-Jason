@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&display=swap');
+
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #1e1e1f;
+}
+
+li, a, button {
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1vw; /* Responsive text */
+}
+
+img {
+    width: 6vw; /* Scales image based on screen width */
+    height: 6vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2vh 10vw; /* Use viewport units for spacing */
+    background-color: #1e1e1f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-top: 10px; /* Adjusted padding for better alignment */
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.logo:active{
+    transform: scale(0.95);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    gap: 3vw; /* Flexible spacing between links */
+    background-color: #1e1e1f;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: color 15s ease-in-out infinite;
+}
+
+.nav__links li a:hover {
+    -webkit-background-clip: text;
+    animation: color 2s ease-in-out infinite;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+#page-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 150px; /* Base font size */
+    color: white;
+}
