@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Deals | Ling's Cars</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo">
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cars.html">Cars</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <span>
+            <h1 id="page-text">Limited Shopping Deals</h1>
+            <p>Grab these exclusive car deals before they're gone!</p>
+        </span>
+    </div>
+    <div class="view">
+        <section class="content">
+            <!-- First row of deals -->
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-10.jpg" alt="Limited Deal Car 1">
+                </div>
+                <div class="card-text">
+                    <h2>2024 Sporty Red Coupe</h2>
+                    <p>Now only $19,999! Save $3,000. Limited stock available.</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-11.jpg" alt="Limited Deal Car 2">
+                </div>
+                <div class="card-text">
+                    <h2>Eco Electric Hatchback</h2>
+                    <p>Special price: $15,499. Includes free charging for 1 year!</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-12.jpg" alt="Limited Deal Car 3">
+                </div>
+                <div class="card-text">
+                    <h2>Family SUV Deluxe</h2>
+                    <p>Only $25,999. Free maintenance package for 2 years.</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-13.jpg" alt="Limited Deal Car 4">
+                </div>
+                <div class="card-text">
+                    <h2>Classic Convertible</h2>
+                    <p>Flash deal: $22,499. Only 3 left in stock!</p>
+                </div>
+            </div>
+            <!-- Second row of deals -->
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-14.jpg" alt="Limited Deal Car 5">
+                </div>
+                <div class="card-text">
+                    <h2>Urban Mini Compact</h2>
+                    <p>Deal: $13,999. Perfect for city driving. Only 5 left!</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-15.jpg" alt="Limited Deal Car 6">
+                </div>
+                <div class="card-text">
+                    <h2>Luxury Sedan Elite</h2>
+                    <p>Now $29,999. Save $4,000. Free premium detailing!</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-16.jpg" alt="Limited Deal Car 7">
+                </div>
+                <div class="card-text">
+                    <h2>Adventure Off-Roader</h2>
+                    <p>Special: $27,499. Rugged and ready. Only 2 left!</p>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f6f6f6; color: #1e1e1f;">
+                <div class="card-image">
+                    <img src="/images/car-9.jpg" alt="Limited Deal Car 8">
+                </div>
+                <div class="card-text">
+                    <h2>Vintage Classic</h2>
+                    <p>Collector's price: $34,999. Rare find. 1 in stock!</p>
+                </div>
+            </div>
+        </section>
+        <button id="backToTopBtn" title="Go to top">↑</button>
+    </div>
+    <script>
+        // Get the button
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Show the button when the user scrolls down 100px
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top smoothly
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Smooth scroll for anchor links (Opera GX compatibility)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

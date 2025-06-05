@@ -277,3 +277,8 @@ p {
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     border: 5px solid var(--accent-color);
 }
+
+button:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.05);
+}
