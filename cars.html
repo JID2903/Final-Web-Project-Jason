@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>cars</title>
     <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
 </head>
 <body>
         <header>
@@ -21,40 +22,36 @@
             </ul>
         </nav>
     </header>
-    <div class="view">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+    <div class="container">
+        <span>
+            <h1 id="page-text">Shop</h1>
+            <p>Explore our exclusive collection of cars and find your perfect match!</p>
+        </span>
     </div>
+    <main>
+        <div class="view">
+            
+            <button id="backToTopBtn" title="Go to top">↑</button>
+    <script>
+        // Get the button
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    // Show the button when the user scrolls down 100px
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    };
+
+    // When the user clicks the button, scroll to the top smoothly
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+</script>
 </body>
 </html>
