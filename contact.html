@@ -5,78 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Ling's Cars</title>
     <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
     <style>
+        /* Internal CSS for key reusable elements */
+        .nav__links a:focus,
+        input:focus,
+        textarea:focus,
+        button:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
         
+        .card {
+            background-color: #2d2d32;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        #backToTopBtn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 99;
+        }
     </style>
 </head>
 <body>
+    <!-- Main Header -->
     <header>
         <div class="logo">
-            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo">
+            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo" tabindex="1">
         </div>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul class="nav__links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cars.html">Cars</a></li>
+                <li><a href="index.html" tabindex="2">Home</a></li>
+                <li><a href="about.html" tabindex="3">About</a></li>
+                <li><a href="shop.html" tabindex="4">Shop</a></li>
+                <li><a href="contact.html" tabindex="5" aria-current="page">Contact</a></li>
+                <li><a href="cars.html" tabindex="6">Cars</a></li>
             </ul>
         </nav>
     </header>
-    <div class="container">
+
+    <!-- Page Title Section -->
+    <div class="container" role="region" aria-labelledby="contact-heading">
         <span>
-            <h1 style="display: flex; align-items: center; justify-content: center; font-size: 50px;">Contact Us</h1>
-            <p style="display: flex; align-items: center; justify-content: center;">Have questions? Reach out and we'll get back to you soon!</p>
+            <h1 id="contact-heading" style="display: flex; align-items: center; justify-content: center; font-size: 50px;" tabindex="7">
+                Contact Us
+            </h1>
+            <p style="display: flex; align-items: center; justify-content: center; font-size: 1.2rem;" tabindex="8">
+                Have questions? Reach out and we'll get back to you soon!
+            </p>
         </span>
     </div>
-    <div class="view">
-        <section class="content" style="background-color: #232326;">
-            <div class="card" style="width: 100%; max-width: 500px; margin: 0 auto;">
-                <form style="display: flex; flex-direction: column; gap: 20px;">
-                    <label for="name" style="color: white;">Name</label>
-                    <input type="text" id="name" name="name" required style="padding: 10px; border-radius: 6px; border: none; color: #1e1e1f;">
-                    
-                    <label for="email" style="color: white;">Email</label>
-                    <input type="email" id="email" name="email" required style="padding: 10px; border-radius: 6px; border: none; color: #1e1e1f;">
-                    
-                    <label for="message" style="color: white;">Message</label>
-                    <textarea id="message" name="message" rows="5" required style="padding: 10px; border-radius: 6px; border: none; color: #1e1e1f;"></textarea>
-                    
-                    <button type="submit" style="background: var(--accent-color); color: #1e1e1f; font-weight: bold; border: none; border-radius: 6px; padding: 12px 0; cursor: pointer; transition: background 0.3s;">Send Message</button>
-                </form>
-            </div>
-        </section>
-        <button id="backToTopBtn" title="Go to top">↑</button>
-    </div>
+
+    <!-- Contact Form Section -->
+    <main>
+        <div class="view">
+            <section class="content" style="background-color: #232326; padding: 2rem 0;">
+                <div class="card" style="width: 100%; max-width: 500px; margin: 0 auto;">
+                    <form style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Name Field -->
+                        <div>
+                            <label for="name" style="color: white; font-size: 1.1rem;" tabindex="9">Name</label>
+                            <input type="text" id="name" name="name" required tabindex="10"
+                                style="padding: 10px; border-radius: 6px; border: none; width: 100%;"
+                                aria-required="true" autocomplete="name">
+                        </div>
+
+                        <!-- Email Field -->
+                        <div>
+                            <label for="email" style="color: white; font-size: 1.1rem;" tabindex="11">Email</label>
+                            <input type="email" id="email" name="email" required tabindex="12"
+                                style="padding: 10px; border-radius: 6px; border: none; width: 100%;"
+                                aria-required="true" autocomplete="email">
+                        </div>
+
+                        <!-- Message Field -->
+                        <div>
+                            <label for="message" style="color: white; font-size: 1.1rem;" tabindex="13">Message</label>
+                            <textarea id="message" name="message" rows="5" required tabindex="14"
+                                style="padding: 10px; border-radius: 6px; border: none; width: 100%; resize: vertical;"
+                                aria-required="true"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" tabindex="15"
+                            style="background: var(--accent-color); color: #1e1e1f; font-weight: bold; border: none; 
+                            border-radius: 6px; padding: 12px 0; cursor: pointer; transition: background 0.3s; font-size: 1.1rem;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </section>
+            
+            <!-- Back to Top Button -->
+            <button id="backToTopBtn" title="Go to top" tabindex="16" 
+                style="background: var(--accent-color); color: #1e1e1f; border: none; 
+                border-radius: 50%; width: 50px; height: 50px; font-size: 1.5rem;">
+                ↑
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-    <p>&copy; 2025 Ling's Cars. All rights reserved.</p>
-    <p>Follow us on:
-        <a href="https://www.facebook.com/lingscars" target="_blank">Facebook</a>,
-        <a href="https://www.instagram.com/lingscars" target="_blank">Instagram</a>,
-        <a href="https://www.twitter.com/lingscars" target="_blank">Twitter</a>
-    </p>
-</footer>
+        <p tabindex="17">&copy; 2025 Ling's Cars. All rights reserved.</p>
+        <p tabindex="18">Follow us on:
+            <a href="https://www.facebook.com/lingscars" target="_blank" rel="noopener noreferrer" 
+                style="color: var(--accent-color); text-decoration: none;" tabindex="19">Facebook</a>,
+            <a href="https://www.instagram.com/lingscars" target="_blank" rel="noopener noreferrer"
+                style="color: var(--accent-color); text-decoration: none;" tabindex="20">Instagram</a>,
+            <a href="https://www.twitter.com/lingscars" target="_blank" rel="noopener noreferrer"
+                style="color: var(--accent-color); text-decoration: none;" tabindex="21">Twitter</a>
+        </p>
+    </footer>
+
     <script>
-        // Get the button
+        // Back to Top Button Functionality
         const backToTopBtn = document.getElementById("backToTopBtn");
-
-        // Show the button when the user scrolls down 100px
-        window.onscroll = function () {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopBtn.style.display = "block";
+        
+        // Show button when scrolling down
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
             } else {
-                backToTopBtn.style.display = "none";
+                backToTopBtn.style.display = 'none';
             }
-        };
-
-        // When the user clicks the button, scroll to the top smoothly
-        backToTopBtn.addEventListener("click", () => {
+        });
+        
+        // Smooth scroll to top
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             window.scrollTo({
                 top: 0,
-                behavior: "smooth"
+                behavior: 'smooth'
             });
+        });
+        
+        // Basic form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const email = document.getElementById('email').value;
+            if (!email.includes('@')) {
+                e.preventDefault();
+                alert('Please enter a valid email address');
+            }
+            // Form would submit here if validation passes
         });
     </script>
 </body>

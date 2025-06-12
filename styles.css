@@ -244,6 +244,7 @@ footer a {
     border: 2.5px solid var(--text-sub);
     text-decoration: none;
     font-weight: 600;
+    color: var(--bg-color);
 }
 .shopping-cart{
     padding-left: 15px;

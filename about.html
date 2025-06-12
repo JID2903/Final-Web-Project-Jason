@@ -5,52 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Ling's Cars</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Main Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo" tabindex="1">
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <!-- Main Navigation Links -->
+                <li><a href="index.html" tabindex="2">Home</a></li>
+                <li><a href="about.html" tabindex="3" aria-current="page">About</a></li>
+                <li><a href="shop.html" tabindex="4">Shop</a></li>
+                <li><a href="contact.html" tabindex="5">Contact</a></li>
+                <li><a href="cars.html" tabindex="6">Cars</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Page Title Section -->
+    <div class="container">
+        <span>
+            <h1 style="display: flex; align-items: center; justify-content: center; font-size: 50px;" tabindex="7">
+                About Us
+            </h1>
+        </span>
+    </div>
 
+    <!-- Main Content Section -->
+    <main>
+        <section class="content" tabindex="8">
+            <!-- Company Introduction -->
+            <p>
+                At Ling's Cars, we're not your typical car leasing company—we're a bold, 
+                eccentric team driven by innovation, transparency, and a flair for the unconventional. 
+                Founded by Ling Valentine, a self-made entrepreneur known for her unique marketing 
+                style and fearless personality, our company has grown from a quirky idea into one 
+                of the most recognized online car leasing brands in the UK. Our mission is simple: 
+                make car leasing fun, affordable, and completely hassle-free. We believe in doing 
+                business with personality, and we're proud to stand out in a sea of grey-suited competitors.
+            </p>
+            
+            <!-- Company Values -->
+            <p>
+                From our cheeky website design to our straightforward pricing, we aim to make the 
+                car leasing process as transparent and enjoyable as possible. We offer a wide range 
+                of vehicles, from eco-friendly electric cars to luxurious SUVs, all available at 
+                competitive prices. Our online platform is designed for ease of use, allowing customers 
+                to browse, compare, and lease their dream car in just a few clicks. Plus, with our 
+                no-nonsense approach to contracts and customer service, you can trust that you're 
+                getting the best deal without any hidden surprises.
+            </p>
+            
+            <!-- Team Information -->
+            <p>
+                Behind the scenes, our dedicated team works tirelessly to bring customers unbeatable 
+                deals on brand-new vehicles, while delivering top-notch customer service with a side 
+                of humor. From developers and designers to leasing experts and support staff, everyone 
+                at Ling's Cars shares a passion for shaking up the industry. We're proud of our 
+                unconventional roots and even prouder of the trust we've built with thousands of 
+                happy customers across the UK. At Ling's Cars, we don't just lease cars—we turn 
+                the whole experience into something memorable.
+            </p>
+        </section>
+    </main>
 
+    <!-- Footer Section -->
+    <footer>
+        <p tabindex="9">&copy; 2025 Ling's Cars. All rights reserved.</p>
+        <p tabindex="10">Follow us on:
+            <a href="https://www.facebook.com/lingscars" target="_blank" tabindex="11">Facebook</a>,
+            <a href="https://www.instagram.com/lingscars" target="_blank" tabindex="12">Instagram</a>,
+            <a href="https://www.twitter.com/lingscars" target="_blank" tabindex="13">Twitter</a>
+        </p>
+    </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top" tabindex="14">↑</button>
 
-
-
-
-
-
-
-
-
-
-    
-<footer>
-    <p>&copy; 2025 Ling's Cars. All rights reserved.</p>
-    <p>Follow us on:
-        <a href="https://www.facebook.com/lingscars" target="_blank">Facebook</a>,
-        <a href="https://www.instagram.com/lingscars" target="_blank">Instagram</a>,
-        <a href="https://www.twitter.com/lingscars" target="_blank">Twitter</a>
-    </p>
-</footer>
-    <button id="backToTopBtn" title="Go to top">↑</button>
     <script>
-        // Get the button
-    const backToTopBtn = document.getElementById("backToTopBtn");
+        /**
+         * BACK TO TOP BUTTON FUNCTIONALITY
+         * 
+         * 1. Shows button when user scrolls down 100px
+         * 2. Scrolls smoothly to top when clicked
+         */
+        
+        // Get the button element
+        const backToTopBtn = document.getElementById("backToTopBtn");
 
-    // Show the button when the user scrolls down 100px
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    };
+        // Show/hide button based on scroll position
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
 
-    // When the user clicks the button, scroll to the top smoothly
-    backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        // Smooth scroll to top when button is clicked
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

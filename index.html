@@ -5,97 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ling's Cars</title>
     <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Main header section with logo and navigation -->
     <header>
         <div class="logo">
-            <img src="/images/ling's-cars-logo.png" alt="ling's-Cars-Logo">
+            <img src="/images/ling's-cars-logo.png" alt="ling's-Cars-Logo" tabindex="1">
         </div>
         <nav>
             <ul class="nav__links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cars.html">Cars</a></li>
+                <!-- Main navigation links with tabindex for accessibility -->
+                <li><a href="index.html" tabindex="2">Home</a></li>
+                <li><a href="about.html" tabindex="3">About</a></li>
+                <li><a href="shop.html" tabindex="4">Shop</a></li>
+                <li><a href="contact.html" tabindex="5">Contact</a></li>
+                <li><a href="cars.html" tabindex="6">Cars</a></li>
             </ul>
         </nav>
-    <span class="shopping-cart">
-        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-</svg>
-    </span>
-    <span class="cart-count">0</span>
     </header>
+
+    <!-- Page title section -->
     <div class="container">
-<span>
-    <h1 class="page-text">Ling's Cars</h1>
-    <p class="page-p-text">Dreams to Reality: Find Your Perfect Car Today!</p>
-</span>
+        <span>
+            <h1 class="page-text" tabindex="7">Ling's Cars</h1>
+            <p class="page-p-text" tabindex="8">Dreams to Reality: Find Your Perfect Car Today!</p>
+        </span>
     </div>
-<main>
-    <div class="view">
-        <section class="content">
-            <div class="card">
-                <a href="limited-deals.html" style="display:block; height:100%; width:100%;">
-                    <img src="/images/car-4.jpg" alt="red-fancy-car">
-                    <h2>Limited Cars for Sale</h2>
-                    <p id="cars-description">Explore our wide range of cars available for sale. From compact cars to luxury vehicles, we have something for everyone.</p>
-                </a>
-            </div>
-            <div class="card">
-                <a href="cars.html" style="display:block; height:100%; width:100%;">
-                    <img src="/images/car-1.jpg" alt="blue-sport-car">
-                    <h2>Electric Cars For Sale</h2>
-        <p id="cars-description">Discover our collection of electric cars. Eco-friendly and efficient, these cars are perfect for the modern driver.</p>
-        </a>
-    </div>
-    <div class="card"><a href="shop.html"><img src="/images/car-3.jpg">
-    <h2>Shop Now</h2>
-    <p id="cars-description">Visit our shop to find the latest models and exclusive deals on cars. Don't miss out on our special offers!</p>
-    </a></div>
-    <div class="card"><a href="cars.html"><img src="/images/car-5.jpg" alt="brown-old-car">
-    <h2>Used Cars For Sale</h2>
-    <p id="cars-description">Looking for a reliable used car? Check out our selection of pre-owned vehicles that offer great value for money.</p>
-    </a></div>
-    <button id="backToTopBtn" title="Go to top">↑</button>
+
+    <!-- Main content section with product cards -->
+    <main>
+        <div class="view">
+            <section class="content">
+                <!-- Product card 1 -->
+                <div class="card" tabindex="9">
+                    <a href="limited-deals.html" style="display:block; height:100%; width:100%;" tabindex="-1">
+                        <img src="/images/car-4.jpg" alt="red-fancy-car" tabindex="10">
+                        <h2>Limited Cars for Sale</h2>
+                        <p id="cars-description">Explore our wide range of cars available for sale. From compact cars to luxury vehicles, we have something for everyone.</p>
+                    </a>
+                </div>
+
+                <!-- Product card 2 -->
+                <div class="card" tabindex="11">
+                    <a href="cars.html" style="display:block; height:100%; width:100%;" tabindex="-1">
+                        <img src="/images/car-1.jpg" alt="blue-sport-car" tabindex="12">
+                        <h2>Electric Cars For Sale</h2>
+                        <p id="cars-description">Discover our collection of electric cars. Eco-friendly and efficient, these cars are perfect for the modern driver.</p>
+                    </a>
+                </div>
+
+                <!-- Product card 3 -->
+                <div class="card" tabindex="13">
+                    <a href="shop.html" tabindex="-1">
+                        <img src="/images/car-3.jpg" alt="car-image" tabindex="14">
+                        <h2>Shop Now</h2>
+                        <p id="cars-description">Visit our shop to find the latest models and exclusive deals on cars. Don't miss out on our special offers!</p>
+                    </a>
+                </div>
+
+                <!-- Product card 4 -->
+                <div class="card" tabindex="15">
+                    <a href="cars.html" tabindex="-1">
+                        <img src="/images/car-5.jpg" alt="brown-old-car" tabindex="16">
+                        <h2>Used Cars For Sale</h2>
+                        <p id="cars-description">Looking for a reliable used car? Check out our selection of pre-owned vehicles that offer great value for money.</p>
+                    </a>
+                </div>
+
+                <!-- Back to top button -->
+                <button id="backToTopBtn" title="Go to top" tabindex="17">↑</button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Partners section with video -->
+    <section class="side-content" tabindex="18">
+        <h1>Working/Collaborating Partners Of Ling's Cars</h1>
+        <br>
+        <video controls src="Ling's.mp4" allowfullscreen tabindex="19"></video>
     </section>
-</div>
-</main>
-<section class="side-content">
-    <h1>Working/Collaborating Partners Of Ling's Cars</h1>
-    <br>
-    <video controls="" src="Ling's.mp4" allowfullscreen></video>
-</section>
-<footer>
-    <p>&copy; 2025 Ling's Cars. All rights reserved.</p>
-    <p>Follow us on:
-        <a href="https://www.facebook.com/lingscars" target="_blank">Facebook</a>,
-        <a href="https://www.instagram.com/lingscars" target="_blank">Instagram</a>,
-        <a href="https://www.twitter.com/lingscars" target="_blank">Twitter</a>
-    </p>
-</footer>
-<script>
-        // Get the button
-    const backToTopBtn = document.getElementById("backToTopBtn");
 
-    // Show the button when the user scrolls down a bit
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    };
+    <!-- Footer section -->
+    <footer>
+        <p tabindex="20">&copy; 2025 Ling's Cars. All rights reserved.</p>
+        <p tabindex="21">Follow us on:
+            <a href="https://www.facebook.com/lingscars" target="_blank" tabindex="22">Facebook</a>,
+            <a href="https://www.instagram.com/lingscars" target="_blank" tabindex="23">Instagram</a>,
+            <a href="https://www.twitter.com/lingscars" target="_blank" tabindex="24">Twitter</a>
+        </p>
+    </footer>
 
-    // When the user clicks the button, scroll to the top smoothly
-    backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    <script>
+        /**
+         * Back to Top Button Functionality
+         */
+        
+        // Get the button element
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Show/hide button based on scroll position
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to top when button is clicked
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

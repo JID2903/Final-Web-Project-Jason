@@ -5,54 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cars</title>
     <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/ling's-cars-logo.png" type="image/x-icon">
 </head>
 <body>
-        <header>
+    <!-- Main header with logo and navigation -->
+    <header>
         <div class="logo">
-            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo">
+            <img src="/images/ling's-cars-logo.png" alt="Ling's Cars Logo" tabindex="0">
         </div>
         <nav>
             <ul class="nav__links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cars.html">Cars</a></li>
+                <!-- Navigation links with tabindex for keyboard accessibility -->
+                <li><a href="index.html" tabindex="1">Home</a></li>
+                <li><a href="about.html" tabindex="2">About</a></li>
+                <li><a href="shop.html" tabindex="3">Shop</a></li>
+                <li><a href="contact.html" tabindex="4">Contact</a></li>
+                <li><a href="cars.html" tabindex="5">Cars</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Page title and description -->
     <div class="container">
         <span>
-            <h1 class="page-text">Used Cars</h1>
-            <p class="page-p-text">Explore our exclusive collection of used cars and find your perfect match!</p>
+            <h1 class="page-text" tabindex="6">Used Cars</h1>
+            <p class="page-p-text" tabindex="7">Explore our exclusive collection of used cars and find your perfect match!</p>
         </span>
     </div>
+
+    <!-- Main content area -->
     <main>
         <div class="view">
-            
+            <div class="card" tabindex="8">
+                <!-- Card content would go here -->
+            </div>
         </div>
-            <button id="backToTopBtn" title="Go to top">↑</button>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p tabindex="9">&copy; 2025 Ling's Cars. All rights reserved.</p>
+        <p tabindex="10">Follow us on:
+            <a href="https://www.facebook.com/lingscars" target="_blank" tabindex="11">Facebook</a>,
+            <a href="https://www.instagram.com/lingscars" target="_blank" tabindex="12">Instagram</a>,
+            <a href="https://www.twitter.com/lingscars" target="_blank" tabindex="13">Twitter</a>
+        </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTopBtn" title="Go to top" tabindex="14">↑</button>
+
     <script>
-        // Get the button
-    const backToTopBtn = document.getElementById("backToTopBtn");
+        /**
+         * Back to Top Button Functionality
+         */
+        
+        // Get the button element
+        const backToTopBtn = document.getElementById("backToTopBtn");
 
-    // Show the button when the user scrolls down 100px
-    window.onscroll = function () {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    };
+        // Show/hide button based on scroll position
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
 
-    // When the user clicks the button, scroll to the top smoothly
-    backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+        // Smooth scroll to top when button is clicked
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>
